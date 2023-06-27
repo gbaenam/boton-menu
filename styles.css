@@ -4,12 +4,13 @@
     place-items: center;
 }
 
-button {
+/* button {
     border: 0;
     width: 3rem;
     gap: .65rem;
     height: 3rem;
     display: flex;
+    cursor: pointer;
     flex-direction: column;
     justify-content: center;
     background: transparent;
@@ -28,11 +29,59 @@ button:hover div:first-child {
     transform: rotate(45deg);
 }
 
+
 button:hover div:nth-child(2) {
     opacity: 0;
 }
 
 button:hover div:last-child {
     transform: rotate(-45deg);
+} */
+
+button {
+    padding: 0;
+    border: none;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    background: transparent;
 }
+
+.button {
+    width: 3rem;
+    height: 3rem;
+    position: relative;
+
+    background-color: lightblue;
+
+}
+
+.line,
+.line::before,
+.line::after {
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    background-color: black;
+}
+
+/* .line {
+    top: 50%;
+} */
+
+.line::before,
+.line::after {
+    content: "";
+    /* display: block; */
+    /* right: 0; */
+}
+
+.line::before {
+    top: -300%;
+}
+
+.line::after {
+    top: 300%;
+}
+
 
